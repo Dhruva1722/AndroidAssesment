@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AndroidAssesment" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+
+        <item name="android:textColorPrimary">#2196F3</item>
+        <!--        <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView.Colored</item>-->
+        <item name="colorPrimary">#E4E4E4</item>
+        <item name="colorOnPrimary">#FDFDFD</item>
+    </style>
+
+    <style name="Theme.AndroidAssesment" parent="Base.Theme.AndroidAssesment" />
+</resources>

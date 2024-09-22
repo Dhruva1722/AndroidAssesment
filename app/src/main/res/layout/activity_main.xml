@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D0F8F8F8"
+    tools:context=".MainActivity"
+    android:id="@+id/main">
+
+    <TextView
+        android:id="@+id/headerTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Android Assignment"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="#E53935"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/scoreTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OverAll Score"
+        android:textAllCaps="true"
+        android:textColor="#808080"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerTitle" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/overallScoreCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/scoreTag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/overallScoreLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overall Score"
+                android:textColor="#272626"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/averageLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AVERAGE"
+                    android:textColor="#FF9800"
+                    android:paddingRight="16dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/overallScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="53"
+                    android:layout_marginStart="100dp"
+                    android:textSize="36sp"
+                    android:textColor="#FF9800"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/100"
+                    android:textColor="#808080"
+                    android:paddingLeft="4dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/searchVolume"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Search Volume"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textColor="#808080"/>
+
+                <TextView
+                    android:id="@+id/competition"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Competition"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textColor="#808080"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/searchVolumeValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="HIGH"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/competitionValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="HIGH"
+                    android:textStyle="bold"
+                    android:textColor="#F44336"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/titleTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textAllCaps="true"
+        android:textColor="#808080"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/overallScoreCard" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/titleCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/titleTag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/titleGeneratedTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is the title generated"
+                android:paddingTop="8dp"
+                android:textColor="#000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="10dp"
+                android:paddingTop="8dp">
+
+                <Button
+                    android:id="@+id/copyTitleBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Copy"
+                    android:layout_margin="2dp"
+                    android:textColor="#0B6CBA"
+                    android:background="@drawable/rectangle_card"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/shareTitleBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Share"
+                    android:layout_margin="2dp"
+                    android:textColor="#0B6CBA"
+                    android:background="@drawable/rectangle_card"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/descriptionTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textAllCaps="true"
+        android:textColor="#808080"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleCard" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/DescriptionCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <TextView
+            android:id="@+id/descriptionsTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            android:paddingTop="8dp"
+            android:textColor="#000000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:paddingTop="8dp">
+
+            <Button
+                android:id="@+id/copyDescBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Copy"
+                android:layout_margin="2dp"
+                android:textColor="#0B6CBA"
+                android:background="@drawable/rectangle_card"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/shareDescBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:layout_margin="2dp"
+                android:textColor="#0B6CBA"
+                android:background="@drawable/rectangle_card"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
